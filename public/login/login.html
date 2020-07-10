@@ -40,7 +40,7 @@
             let email = $('input[name=uname]').val();
             let senha = $('input[name=psw]').val();
 
-            const response = await fetch('http://localhost:3333/user/signIn', {
+            const response = await fetch('https://chatdonegao.herokuapp.com/user/signIn', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -51,7 +51,7 @@
             const content = await response.json();
 
             if (response.status == 200) {
-                window.location.href = `http://localhost:3333/chat?idUser=${content.user._id}&name=${content.user.name}`;
+                window.location.href = `https://chatdonegao.herokuapp.com/chat?idUser=${content.user._id}&name=${content.user.name}`;
 
             } else {
                 console.error(response.status);
