@@ -6,5 +6,6 @@ dotenv.config({
 
 module.exports = {
     databaseURL: process.env.DB_URL,
-    variavel_teste: process.env.ENV_TEST
+    variavel_teste: process.env.ENV_TEST,
+    API_SECRET : process.env.JWT_SECRET
 };
